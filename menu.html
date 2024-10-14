@@ -13,21 +13,17 @@
         <div class="logo-container">
             <img src="logo.png" alt="Logo" class="logo">
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><button id="drinksMenuBtn" class="menu-btn"><i class="fas fa-coffee"></i> Drinks Menu</button></li>
-                <li><button id="foodMenuBtn" class="menu-btn"><i class="fas fa-utensils"></i> Food Menu</button></li>
-            </ul>
-        </nav>
     </header>
+
+    <section class="menu-buttons-section">
+        <button id="drinksMenuBtn" class="menu-btn"><i class="fas fa-coffee"></i> Drinks Menu</button>
+        <button id="foodMenuBtn" class="menu-btn"><i class="fas fa-utensils"></i> Food Menu</button>
+    </section>
 
     <section id="menuSection" class="menu-section">
         <h1>Welcome to Our Menu</h1>
         <p>Click the buttons above to explore our delicious offerings.</p>
     </section>
-</body>
-</html>
-
 <style>
 * {
     margin: 0;
@@ -37,13 +33,13 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: #f0f0f0;
-    color: #333;
+    background-color: #000; /* Set the background to black */
+    color: #fff;
 }
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #4CAF50;
     padding: 20px;
@@ -55,10 +51,11 @@ body {
     height: auto;
 }
 
-.navbar ul {
-    list-style-type: none;
+.menu-buttons-section {
     display: flex;
+    justify-content: center;
     gap: 20px;
+    padding: 40px;
 }
 
 .menu-btn {
@@ -84,7 +81,6 @@ body {
 .menu-section {
     text-align: center;
     padding: 50px;
-    background-color: #fff;
     animation: fadeIn 1.2s ease-in-out;
 }
 
@@ -95,11 +91,11 @@ h1 {
 
 p {
     font-size: 18px;
-    color: #666;
+    color: #bbb;
 }
 
 @media only screen and (max-width: 768px) {
-    .navbar ul {
+    .menu-buttons-section {
         flex-direction: column;
     }
 
@@ -118,7 +114,7 @@ p {
     }
 }
 </style>
-
+    
 <script>
 document.getElementById("drinksMenuBtn").addEventListener("click", function () {
     document.getElementById("menuSection").innerHTML = `
@@ -133,4 +129,10 @@ document.getElementById("foodMenuBtn").addEventListener("click", function () {
         <p>Delight in our delicious meals prepared by expert chefs!</p>
     `;
 });
+
+
+
+    
 </script>
+</body>
+</html>
