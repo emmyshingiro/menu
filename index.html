@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <img class="logo" src="logo.png" alt="Logo"/>
+    <div class="title">MENU</div>
+    <div class="buttons">
+        <button id="drinks">Drinks</button>
+        <button id="foods">Foods</button>
+    </div>
+    <script>
+        const drinks = document.getElementById('drinks');
+        const foods = document.getElementById('foods');
+
+        drinks.onclick = () => {
+            // Ensure the PDF path is correct
+            const pdfPath = "PRICE%20FOR%20ITEMS%20ALL.pdf"; // URL encoding spaces as %20
+            window.open(pdfPath, '_blank'); // Open PDF in a new tab
+        };
+
+        // Optional: You can add functionality for the 'Foods' button if needed
+        foods.onclick = () => {
+            alert("Foods button clicked!");
+            // Example of redirect or other functionality:
+            // window.location.href = "FOODS_PAGE.html";
+        };
+    </script>
+</body>
+</html>
