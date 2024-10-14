@@ -25,9 +25,8 @@
 
         // Optional: You can add functionality for the 'Foods' button if needed
         foods.onclick = () => {
-            alert("Foods button clicked!");
-            // Example of redirect or other functionality:
-            // window.location.href = "FOODS_PAGE.html";
+            const pdfPath = "PRICE%20FOR%20ITEMS%20ALL.pdf"; // URL encoding spaces as %20
+            window.open(pdfPath, '_blank'); // Open PDF in a new tab
         };
     </script>
 </body>
